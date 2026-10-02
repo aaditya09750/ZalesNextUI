@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* ========================================================================== */
+/*  Theme tokens                                                              */
+/* ========================================================================== */
+
+@theme {
+  --font-display: "Clash Display", "Satoshi", sans-serif;
+  --font-body: "Satoshi", "Clash Display", sans-serif;
+
+  --color-shell: #a5826b;
+  --color-ink: #16110d;
+  --color-ink-2: #1e1712;
+  --color-ink-3: #292019;
+  --color-cream: #f3ece3;
+  --color-tan: #b78c6c;
+  --color-tan-2: #c9a184;
+  --color-mute: #8f7e70;
+  --color-line: rgba(243, 236, 227, 0.12);
+}
+
+/* ========================================================================== */
+/*  Base styles                                                               */
+/* ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-shell);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-tan);
+  color: var(--color-ink);
+}
+
+/* ========================================================================== */
+/*  Scroll reveal                                                             */
+/* ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--ry, 28px));
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ========================================================================== */
+/*  Animations                                                                */
+/* ========================================================================== */
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee var(--speed, 46s) linear infinite;
+}
+.marquee-track.reverse {
+  animation-direction: reverse;
+}
+.marquee-hover:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-14px) rotate(var(--rot, 0deg));
+  }
+}
+.floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+@keyframes cardin {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -46%) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.cardin {
+  animation: cardin 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.shimmer {
+  animation: shimmer 3.2s ease-in-out infinite;
+}
+
+/* ========================================================================== */
+/*  Utilities                                                                 */
+/* ========================================================================== */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
