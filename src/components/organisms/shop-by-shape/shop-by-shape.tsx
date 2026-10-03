@@ -24,10 +24,7 @@ export function ShopByShape() {
   };
 
   return (
-    <section
-      id="shop"
-      className="w-full scroll-mt-28 px-4 pt-24 pb-16 sm:scroll-mt-36 sm:px-8 sm:pt-32 sm:pb-24 lg:px-12"
-    >
+    <section id="shop" className="w-full px-4 pt-20 pb-16 sm:px-8 sm:pt-28 sm:pb-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-3">

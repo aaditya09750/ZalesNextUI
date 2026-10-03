@@ -17,10 +17,7 @@ export function Newsletter() {
   };
 
   return (
-    <section
-      id="newsletter"
-      className="w-full scroll-mt-28 px-4 pt-20 pb-8 sm:scroll-mt-36 sm:px-8 sm:pt-28 sm:pb-10 lg:px-12"
-    >
+    <section id="newsletter" className="w-full px-4 pt-20 pb-8 sm:px-8 sm:pt-28 sm:pb-10 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <h2 className="font-display text-cream flex flex-wrap items-center gap-3 text-3xl font-medium sm:gap-4 sm:text-5xl">
