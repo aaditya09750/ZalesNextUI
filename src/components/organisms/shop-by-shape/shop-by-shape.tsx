@@ -24,7 +24,10 @@ export function ShopByShape() {
   };
 
   return (
-    <section id="shop" className="w-full px-4 pt-20 pb-16 sm:px-8 sm:pt-28 sm:pb-24 lg:px-12">
+    <section
+      id="shop"
+      className="w-full scroll-mt-28 px-4 pt-24 pb-16 sm:scroll-mt-36 sm:px-8 sm:pt-32 sm:pb-24 lg:px-12"
+    >
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
@@ -56,15 +59,15 @@ export function ShopByShape() {
 
         {/* Enhanced Diamond Dock / Track */}
         <Reveal delay={150}>
-          <div className="no-scrollbar relative mt-8 overflow-x-auto py-16 sm:mt-10 sm:py-20 md:overflow-visible">
+          <div className="no-scrollbar relative mt-16 overflow-x-auto pb-4 sm:mt-20">
             <div className="relative mx-auto flex max-w-4xl min-w-[680px] items-center justify-between px-10">
-              {/* Dual-layered jewelry rail aligned with bezel center */}
+              {/* Dual-layered jewelry rail */}
               <span
-                className="from-line/80 absolute top-16 right-10 left-10 h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent sm:top-[72px]"
+                className="from-line/80 absolute top-[51px] right-10 left-10 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
                 aria-hidden
               />
               <span
-                className="via-tan/35 absolute top-16 right-14 left-14 h-px -translate-y-1/2 bg-gradient-to-r from-transparent to-transparent sm:top-[72px]"
+                className="via-tan/35 absolute top-[52px] right-14 left-14 h-px bg-gradient-to-r from-transparent to-transparent"
                 aria-hidden
               />
 
@@ -73,7 +76,7 @@ export function ShopByShape() {
                 type="button"
                 onClick={handlePrev}
                 aria-label="Previous diamond shape"
-                className="group border-line bg-ink-2/90 text-mute hover:border-tan/60 hover:bg-ink-3 hover:text-cream absolute top-16 left-0 z-20 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_20px_rgba(183,140,108,0.25)] sm:top-[72px]"
+                className="group border-line bg-ink-2/90 text-mute hover:border-tan/60 hover:bg-ink-3 hover:text-cream absolute top-[52px] left-0 z-20 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_20px_rgba(183,140,108,0.25)]"
               >
                 <ArrowLeft className="size-3.5 transition-transform group-hover:-translate-x-0.5" />
               </button>
@@ -82,7 +85,7 @@ export function ShopByShape() {
                 type="button"
                 onClick={handleNext}
                 aria-label="Next diamond shape"
-                className="group border-line bg-ink-2/90 text-mute hover:border-tan/60 hover:bg-ink-3 hover:text-cream absolute top-16 right-0 z-20 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_20px_rgba(183,140,108,0.25)] sm:top-[72px]"
+                className="group border-line bg-ink-2/90 text-mute hover:border-tan/60 hover:bg-ink-3 hover:text-cream absolute top-[52px] right-0 z-20 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_20px_rgba(183,140,108,0.25)]"
               >
                 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
               </button>
@@ -98,65 +101,54 @@ export function ShopByShape() {
                     aria-pressed={isActive}
                     className="group relative flex flex-col items-center gap-4 focus:outline-none"
                   >
-                    {/* Centered Bezel Frame */}
-                    <div className="relative flex h-32 items-center justify-center sm:h-36">
-                      {/* Ambient soft glow layer behind active node */}
-                      {isActive && (
-                        <div
-                          className="bg-tan/20 pointer-events-none absolute -inset-4 rounded-full blur-2xl sm:-inset-6"
-                          aria-hidden
-                        />
+                    {/* Bezel Ring */}
+                    <div
+                      className={cn(
+                        "relative flex items-center justify-center rounded-full transition-all duration-500",
+                        isActive
+                          ? "size-28 bg-gradient-to-tr from-[#d4af83] via-[#f7e7d0] to-[#9c7553] p-[2px] shadow-[0_0_55px_rgba(212,175,131,0.38),0_12px_40px_rgba(0,0,0,0.85)] sm:size-32"
+                          : "from-cream/15 via-line hover:from-tan/40 hover:via-line size-22 rounded-full bg-gradient-to-b to-transparent p-[1px] group-hover:scale-105 sm:size-24",
                       )}
-
-                      {/* Bezel Ring */}
+                    >
+                      {/* Inner Gem Capsule */}
                       <div
                         className={cn(
-                          "relative flex items-center justify-center rounded-full transition-all duration-500",
+                          "relative flex size-full items-center justify-center overflow-hidden rounded-full transition-all duration-500",
                           isActive
-                            ? "size-28 bg-gradient-to-tr from-[#d4af83] via-[#f7e7d0] to-[#9c7553] p-[2px] shadow-[0_0_50px_rgba(212,175,131,0.35),0_12px_40px_rgba(0,0,0,0.8)] sm:size-32"
-                            : "from-cream/15 via-line hover:from-tan/40 hover:via-line size-22 rounded-full bg-gradient-to-b to-transparent p-[1px] group-hover:scale-105 sm:size-24",
+                            ? "bg-gradient-to-b from-[#251d16] via-[#1a140f] to-[#100d0a]"
+                            : "bg-gradient-to-b from-[#191410] to-[#0f0c0a] group-hover:from-[#211a14]",
                         )}
                       >
-                        {/* Inner Gem Capsule */}
-                        <div
-                          className={cn(
-                            "relative flex size-full items-center justify-center overflow-hidden rounded-full transition-all duration-500",
-                            isActive
-                              ? "bg-gradient-to-b from-[#251d16] via-[#1a140f] to-[#100d0a]"
-                              : "bg-gradient-to-b from-[#191410] to-[#0f0c0a] group-hover:from-[#211a14]",
-                          )}
-                        >
-                          {/* Specular glass reflection on top arc */}
-                          <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-full bg-gradient-to-b from-white/10 to-transparent" />
+                        {/* Specular glass reflection on top arc */}
+                        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-full bg-gradient-to-b from-white/10 to-transparent" />
 
-                          {/* Ambient radial glow when active */}
-                          {isActive && (
-                            <div className="from-tan/30 pointer-events-none absolute inset-0 bg-radial via-transparent to-transparent" />
-                          )}
-
-                          {/* Diamond Icon */}
-                          <Icon
-                            className={cn(
-                              "relative z-10 transition-all duration-500",
-                              isActive
-                                ? "text-cream size-14 drop-shadow-[0_2px_14px_rgba(212,175,131,0.65)] sm:size-16"
-                                : "text-mute group-hover:text-cream/80 size-10 sm:size-11",
-                            )}
-                          />
-
-                          {/* Sparkle glint on active gem */}
-                          {isActive && (
-                            <div className="pointer-events-none absolute top-2.5 right-2.5">
-                              <Sparkle className="text-tan size-3.5 animate-pulse drop-shadow-[0_0_8px_rgba(247,231,208,0.9)]" />
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Active indicator pip */}
+                        {/* Ambient radial glow when active */}
                         {isActive && (
-                          <span className="bg-tan absolute -bottom-2 size-2 rounded-full shadow-[0_0_10px_#d4af83]" />
+                          <div className="from-tan/30 pointer-events-none absolute inset-0 bg-radial via-transparent to-transparent" />
+                        )}
+
+                        {/* Diamond Icon */}
+                        <Icon
+                          className={cn(
+                            "relative z-10 transition-all duration-500",
+                            isActive
+                              ? "text-cream size-14 drop-shadow-[0_2px_14px_rgba(212,175,131,0.65)] sm:size-16"
+                              : "text-mute group-hover:text-cream/80 size-10 sm:size-11",
+                          )}
+                        />
+
+                        {/* Sparkle glint on active gem */}
+                        {isActive && (
+                          <div className="pointer-events-none absolute top-2.5 right-2.5">
+                            <Sparkle className="text-tan size-3.5 animate-pulse drop-shadow-[0_0_8px_rgba(247,231,208,0.9)]" />
+                          </div>
                         )}
                       </div>
+
+                      {/* Active indicator pip */}
+                      {isActive && (
+                        <span className="bg-tan absolute -bottom-2 size-2 rounded-full shadow-[0_0_10px_#d4af83]" />
+                      )}
                     </div>
 
                     {/* Shape Label and Facets Badge */}
@@ -189,7 +181,7 @@ export function ShopByShape() {
 
         {/* Dynamic Cut Inspection Console */}
         <Reveal delay={200}>
-          <div className="border-tan/25 relative mx-auto mt-6 max-w-4xl overflow-hidden rounded-3xl border bg-gradient-to-b from-[#1a140f]/90 via-[#120e0a]/95 to-[#0b0907]/95 p-6 shadow-[0_25px_70px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:mt-10 sm:p-10">
+          <div className="border-tan/25 relative mx-auto mt-14 max-w-4xl overflow-hidden rounded-3xl border bg-gradient-to-b from-[#1a140f]/90 via-[#120e0a]/95 to-[#0b0907]/95 p-6 shadow-[0_25px_70px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:mt-18 sm:p-10">
             {/* Subtle ambient gem backlight */}
             <div
               className="bg-tan/12 pointer-events-none absolute -top-24 left-1/2 h-44 w-80 -translate-x-1/2 rounded-full blur-3xl"

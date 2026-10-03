@@ -10,7 +10,10 @@ export function OurWorks() {
   const ordered = WORKS.map((_, i) => WORKS[(featured - 2 + i + WORKS.length) % WORKS.length]!);
 
   return (
-    <section id="works" className="w-full px-4 py-20 sm:px-8 sm:py-28 lg:px-12">
+    <section
+      id="works"
+      className="w-full scroll-mt-28 px-4 py-20 sm:scroll-mt-36 sm:px-8 sm:py-28 lg:px-12"
+    >
       <div className="mx-auto max-w-[1600px]">
         <Reveal>
           <div className="border-line/70 flex flex-col items-start justify-between gap-6 border-b pb-8 md:flex-row md:items-end">
