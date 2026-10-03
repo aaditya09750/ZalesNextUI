@@ -1,0 +1,12 @@
+export { CategoryCarousel } from "./category-carousel";
+export { CustomCTA } from "./custom-cta";
+export { Hero } from "./hero";
+export { InfoCards } from "./info-cards";
+export { Navbar } from "./navbar";
+export { NewCollection } from "./new-collection";
+export { Newsletter } from "./newsletter";
+export { OurWorks } from "./our-works";
+export { QuoteLogos } from "./quote-logos";
+export { ShopByShape } from "./shop-by-shape";
+export { Testimonials } from "./testimonials";
+export { TryOn } from "./try-on";
