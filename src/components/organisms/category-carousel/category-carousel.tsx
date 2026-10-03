@@ -22,14 +22,19 @@ export function CategoryCarousel() {
         aria-hidden
       />
       <Reveal>
-        <h2 className="font-display text-cream flex flex-wrap items-center justify-center gap-3 px-4 text-center text-4xl font-medium sm:gap-4 sm:text-7xl lg:text-8xl">
-          Category
-          <HalfDisc className="size-8 sm:size-14" />
-          View
-        </h2>
+        <div className="flex flex-col items-center text-center">
+          <span className="border-tan/30 bg-tan/10 text-tan mb-3 inline-flex items-center gap-2 rounded-full border px-4 py-1 text-[11px] font-medium tracking-[0.2em] uppercase backdrop-blur-sm">
+            ✦ Curated Gallery
+          </span>
+          <h2 className="font-display text-cream flex flex-wrap items-center justify-center gap-3 px-4 text-center text-4xl font-medium sm:gap-4 sm:text-7xl lg:text-8xl">
+            Category
+            <HalfDisc className="size-8 sm:size-14" />
+            View
+          </h2>
+        </div>
       </Reveal>
 
-      <div className="relative mx-auto mt-12 h-[400px] max-w-5xl px-4 sm:mt-16 sm:h-[470px]">
+      <div className="relative mx-auto mt-16 h-[460px] max-w-5xl px-4 sm:mt-24 sm:h-[520px]">
         {[
           { i: prev, side: "left" as const },
           { i: next, side: "right" as const },
@@ -37,7 +42,7 @@ export function CategoryCarousel() {
           <div
             key={side}
             className={cn(
-              "border-line absolute top-1/2 hidden h-[340px] w-[240px] -translate-y-1/2 overflow-hidden rounded-3xl border sm:block md:h-[360px] md:w-[260px]",
+              "border-line absolute top-1/2 hidden h-[320px] w-[230px] -translate-y-1/2 overflow-hidden rounded-3xl border sm:block md:h-[360px] md:w-[260px]",
               side === "left" ? "left-4 -rotate-6 md:left-16" : "right-4 rotate-6 md:right-16",
             )}
           >
@@ -51,7 +56,7 @@ export function CategoryCarousel() {
 
         <div
           key={index}
-          className="cardin absolute top-1/2 left-1/2 h-[360px] w-[260px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:h-[440px] sm:w-[340px]"
+          className="cardin absolute top-1/2 left-1/2 h-[380px] w-[280px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.65)] sm:h-[440px] sm:w-[320px]"
         >
           <img
             src={CATEGORIES[index]?.img}
@@ -69,7 +74,7 @@ export function CategoryCarousel() {
       </div>
 
       <Reveal delay={100}>
-        <div className="mt-12 flex flex-wrap items-end justify-center gap-x-10 gap-y-2 px-4">
+        <div className="mt-14 flex flex-wrap items-end justify-center gap-x-10 gap-y-2 px-4 sm:mt-16">
           {CATEGORIES.map((c, i) => (
             <button
               key={c.name}

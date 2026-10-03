@@ -13,14 +13,19 @@ export function OurWorks() {
     <section id="works" className="w-full px-4 py-20 sm:px-8 sm:py-28 lg:px-12">
       <div className="mx-auto max-w-[1600px]">
         <Reveal>
-          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-            <p className="text-mute max-w-[240px] text-[12px] leading-relaxed italic">
-              Zales combination of statement and simplistic style helps create a look that&apos;s as
-              unique as you are
+          <div className="border-line/70 flex flex-col items-start justify-between gap-6 border-b pb-8 md:flex-row md:items-end">
+            <div>
+              <span className="text-tan border-tan/30 bg-tan/10 mb-3 inline-flex items-center gap-2 rounded-full border px-4 py-1 text-[11px] font-medium tracking-[0.2em] uppercase backdrop-blur-sm">
+                ✦ Master Crafts
+              </span>
+              <h2 className="font-display text-cream mt-2 text-4xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
+                Our Signature Works
+              </h2>
+            </div>
+            <p className="text-mute max-w-sm text-xs leading-relaxed italic sm:text-sm">
+              Zales combination of statement design and simplistic style helps create a look
+              that&apos;s as unique as you are.
             </p>
-            <h2 className="font-display text-cream text-4xl font-semibold tracking-tight sm:text-7xl lg:text-8xl">
-              OUR WORKS
-            </h2>
           </div>
         </Reveal>
 
