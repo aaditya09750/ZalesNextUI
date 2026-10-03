@@ -5,31 +5,31 @@ import { Reveal } from "@/components/atoms";
 
 export function TryOn() {
   return (
-    <section className="pb-10">
-      <div className="px-6 sm:px-10 lg:px-14">
+    <section className="w-full pb-16 sm:pb-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <Reveal>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-            <h2 className="font-display text-cream text-5xl font-medium sm:text-6xl lg:text-7xl">
+            <h2 className="font-display text-cream text-4xl font-medium sm:text-6xl lg:text-7xl">
               Watch on
             </h2>
             <span className="flex -space-x-3">
-              <span className="border-line bg-ink-2 text-cream grid size-12 place-items-center rounded-full border">
+              <span className="border-line bg-ink-2 text-cream grid size-11 place-items-center rounded-full border sm:size-12">
                 <ArrowLeft className="size-4" />
               </span>
-              <span className="bg-cream text-ink grid size-12 place-items-center rounded-full">
+              <span className="bg-cream text-ink grid size-11 place-items-center rounded-full sm:size-12">
                 <ArrowRight className="size-4" />
               </span>
             </span>
-            <span className="border-line text-cream/80 rounded-full border px-6 py-3 text-sm">
+            <span className="border-line text-cream/80 rounded-full border px-5 py-2.5 text-xs sm:px-6 sm:py-3 sm:text-sm">
               try it now!
             </span>
           </div>
           <div className="mt-1 flex justify-end">
-            <h2 className="font-display text-cream text-5xl font-medium sm:text-6xl lg:text-7xl">
+            <h2 className="font-display text-cream text-4xl font-medium sm:text-6xl lg:text-7xl">
               your hands!
             </h2>
           </div>
-          <p className="text-mute mt-5 max-w-[260px] text-[11px] leading-relaxed tracking-[0.12em] uppercase italic">
+          <p className="text-mute mt-4 max-w-[280px] text-[11px] leading-relaxed tracking-[0.12em] uppercase italic sm:mt-5">
             With the help of AI, you can upload a photo of your hand and see your ring on your hand
             before buying
           </p>

@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { SmoothScroll } from "@/components/atoms";
 
 export const metadata: Metadata = {
   title: "Zales — You Deserve the Most Unique Jewelry",
@@ -19,7 +20,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll />
+        {children}
+      </body>
     </html>
   );
 }

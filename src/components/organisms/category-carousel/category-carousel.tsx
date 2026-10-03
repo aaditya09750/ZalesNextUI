@@ -12,7 +12,7 @@ export function CategoryCarousel() {
   const next = (index + 1) % CATEGORIES.length;
 
   return (
-    <section className="bg-ink-2 relative overflow-hidden py-20">
+    <section className="bg-ink-2 relative w-full overflow-hidden py-20 sm:py-28">
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -22,14 +22,14 @@ export function CategoryCarousel() {
         aria-hidden
       />
       <Reveal>
-        <h2 className="font-display text-cream flex flex-wrap items-center justify-center gap-4 px-4 text-center text-5xl font-medium sm:text-7xl lg:text-8xl">
+        <h2 className="font-display text-cream flex flex-wrap items-center justify-center gap-3 px-4 text-center text-4xl font-medium sm:gap-4 sm:text-7xl lg:text-8xl">
           Category
-          <HalfDisc className="size-10 sm:size-14" />
+          <HalfDisc className="size-8 sm:size-14" />
           View
         </h2>
       </Reveal>
 
-      <div className="relative mx-auto mt-14 h-[420px] max-w-5xl sm:h-[470px]">
+      <div className="relative mx-auto mt-12 h-[400px] max-w-5xl px-4 sm:mt-16 sm:h-[470px]">
         {[
           { i: prev, side: "left" as const },
           { i: next, side: "right" as const },
@@ -37,7 +37,7 @@ export function CategoryCarousel() {
           <div
             key={side}
             className={cn(
-              "border-line absolute top-1/2 hidden h-[360px] w-[260px] -translate-y-1/2 overflow-hidden rounded-3xl border sm:block",
+              "border-line absolute top-1/2 hidden h-[340px] w-[240px] -translate-y-1/2 overflow-hidden rounded-3xl border sm:block md:h-[360px] md:w-[260px]",
               side === "left" ? "left-4 -rotate-6 md:left-16" : "right-4 rotate-6 md:right-16",
             )}
           >
@@ -51,7 +51,7 @@ export function CategoryCarousel() {
 
         <div
           key={index}
-          className="cardin absolute top-1/2 left-1/2 h-[380px] w-[280px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:h-[440px] sm:w-[340px]"
+          className="cardin absolute top-1/2 left-1/2 h-[360px] w-[260px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:h-[440px] sm:w-[340px]"
         >
           <img
             src={CATEGORIES[index]?.img}

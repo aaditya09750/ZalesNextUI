@@ -3,7 +3,7 @@ import { Reveal } from "@/components/atoms";
 
 export function QuoteLogos() {
   return (
-    <section className="px-6 py-24 sm:px-10">
+    <section className="w-full px-4 py-20 sm:px-8 sm:py-28">
       <Reveal>
         <p className="font-display text-cream mx-auto max-w-3xl text-center text-2xl leading-snug font-medium sm:text-3xl">
           Trends come and go 🤞 and style evolves 💎 It&apos;s important to have pieces of jewelry

@@ -9,7 +9,7 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="border-line bg-ink-2/80 relative z-30 flex items-center justify-between gap-4 rounded-full border py-2.5 pr-2.5 pl-6 backdrop-blur-md">
+    <nav className="border-line bg-ink-2/90 relative z-40 flex w-full items-center justify-between gap-3 rounded-full border py-2 pr-2 pl-4 shadow-xl backdrop-blur-md sm:gap-4 sm:py-2.5 sm:pr-2.5 sm:pl-6">
       <a href="#" className="font-display text-cream text-lg font-semibold tracking-wide">
         ZALES
       </a>

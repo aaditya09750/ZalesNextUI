@@ -6,12 +6,12 @@ export function InfoCards() {
   return (
     <div className="mt-4 grid gap-4 md:grid-cols-[1.55fr_1fr]">
       <Reveal className="h-full">
-        <div className="group bg-ink-2 flex h-full items-center gap-6 rounded-[1.75rem] p-6 sm:p-7">
-          <div className="flex shrink-0 -space-x-5">
-            <span className="bg-tan text-ink grid size-24 place-items-center rounded-full sm:size-28">
-              <Sunburst className="spin-slow size-11" />
+        <div className="group bg-ink-2 flex h-full flex-col items-start gap-4 rounded-2xl p-5 sm:flex-row sm:items-center sm:gap-6 sm:rounded-[1.75rem] sm:p-7">
+          <div className="flex shrink-0 -space-x-4 sm:-space-x-5">
+            <span className="bg-tan text-ink grid size-20 place-items-center rounded-full sm:size-24 lg:size-28">
+              <Sunburst className="spin-slow size-9 sm:size-11" />
             </span>
-            <span className="border-ink-2 size-24 overflow-hidden rounded-full border-4 sm:size-28">
+            <span className="border-ink-2 size-20 overflow-hidden rounded-full border-4 sm:size-24 lg:size-28">
               <img
                 src={RING_IMG}
                 alt="Hand wearing a crafted gold ring"
@@ -20,11 +20,12 @@ export function InfoCards() {
             </span>
           </div>
           <div>
-            <p className="text-cream/60 text-[13px] italic">Make your ring in just 4 steps</p>
-            <h3 className="font-display text-cream mt-1.5 text-xl leading-snug font-medium sm:text-2xl">
+            <p className="text-cream/60 text-xs italic sm:text-[13px]">
+              Make your ring in just 4 steps
+            </p>
+            <h3 className="font-display text-cream mt-1.5 text-lg leading-snug font-medium sm:text-2xl">
               Design your own
-              <br />
-              gemstone ring
+              <br className="hidden sm:inline" /> gemstone ring
             </h3>
           </div>
         </div>
