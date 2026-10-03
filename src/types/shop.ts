@@ -1,9 +1,14 @@
-import type { ComponentType } from "react";
-
 export interface ShapeItem {
   id: string;
   label: string;
-  Icon: ComponentType<{ className?: string }>;
+  tagline: string;
+  description: string;
+  facets: number;
+  fireRating: string;
+  ratio: string;
+  popularSetting: string;
+  startingPrice: string;
+  img: string;
 }
 
 export interface CategoryItem {
