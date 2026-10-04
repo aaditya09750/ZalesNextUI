@@ -14,10 +14,7 @@ export const ORGANIZATION_SCHEMA = {
   description:
     "Expert designers crafting the most exquisite luxury diamond jewelry — rings, necklaces, earrings, and bracelets — for you to shine in a special way in the world.",
   foundingDate: "2024",
-  sameAs: [
-    "https://www.linkedin.com/in/aadityagunjal0975/",
-    "https://github.com/aaditya09750",
-  ],
+  sameAs: ["https://www.linkedin.com/in/aadityagunjal0975/", "https://github.com/aaditya09750"],
   contactPoint: {
     "@type": "ContactPoint",
     email: "aadigunjal0975@gmail.com",
